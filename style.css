@@ -1,0 +1,221 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%
+    display: block;
+    width: 75%;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+section {
+    padding: 7em 0;
+}
+
+
+.container {
+    width: 85%;
+    max-width: 65em;
+    margin: 0 auto;
+}
+
+.split {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1em;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    min-width: 15em;
+    justify-content: center;
+}
+
+.split .featured-item .featured-img {
+    flex-basis: 30%;
+    min-width: 15em;
+    -ms-flex-preferred-size: 30%;
+    min-width: 15em;
+}
+
+.spacing > * + *  {
+    margin-top: var(--spacer, 2rem);
+}
+
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-text, #fff);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    padding: .5em 1.25em;
+    background: var(--clr-accent, blue);
+    border-radius: .25em;
+    transition:
+        transform 250ms ease-in-out,
+        opacity 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+    transform: scale(1.1);
+    opacity: .9;
+}
+
+.primary-title {
+    font-size: 4rem;
+    font-size: clamp(3rem, 5vw + 1rem, 4.5rem));
+    line-height: 1.1;
+    tex-transform: uppercase;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 4rem;
+    font-size: clamp(2.5rem, 5vw + 1rem, 4rem));
+    font-size:
+    line-height: 1;
+    color: #17353d;
+    margin-bottom: 5rem;
+
+}
+
+.hero {
+    color: white;
+    text-align: center;
+    padding: 15em 0;
+    background-color: #fff;
+    background-image: url(img/NikeAirForce1FlyleatherRuohanWang.png),
+        radial-gradient(#444, #111);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.featured {
+    background: #eee;
+}
+
+.featured-item {
+    display: block;
+    position: relative;
+    -webkit-transform: scale(0.85);
+    transform: scale(.85);
+    transition: transform 250ms ease-in-out;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    line-height: 1.2;
+}
+
+
+.featured-item:hover, .featured-item:focus {
+    transform: scale(1);
+}
+
+.featured-item:hover .featured-details, .featured-item:focus .featured-details {
+    opacity: 1;
+    text-shadow: 0 0 2em white;
+}
+
+.featured-item::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    padding: 75% 75% 0 0;
+    border-radius: 50%;
+    background: #2193b0;
+    z-index: -1;
+}
+
+
+.featured-details {
+    opacity: 0;
+    transition: opacity 250ms linear;
+
+}
+
+.featured-details span {
+    display: block;
+    font-weight: 700;
+    font-size: 2.5rem;
+
+}
+
+.product-image {
+    width: 105%;
+    margin: -11em 0 0 0;
+    transform: rotateY(180deg);
+}
+
+
+
+.products {
+    background: radial-gradient(var(--clr-inner, limegreen), var(--clr-outer, purple));
+    padding: 2em;
+    border-radius: 1em;
+    margin-bottom: 3em;
+    text-align: center;
+
+}
+
+
+.product-title {
+    font-size: 4rem;
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: #fff;
+    text-shadow: 0 0 .2em rgba(#000, .2);
+
+}
+
+
+.shoe-denim {
+    --clr-inner: #faa700;
+    --clr-outer: #e48d00;
+    --clr-accent: #a1173c;
+}
+
+.shoe-white {
+    --clr-inner: #fce4b3;
+    --clr-outer: #eac886;
+    --clr-accent: #2f4858;
+
+}
+
+.shoe-gold {
+    --clr-inner: #6dd5ed;
+    --clr-outer: #2193b0;
+    --clr-accent: #e48d00;
+}
+
+@media(min-width: 45em) {
+    .product-image,
+    .product-title {
+        text-align: left;
+        float: right;
+        width: 50%;
+        shape-outside: url(Jordan3RetroSEFireRedDenim.png);
+        shape-margin: 1em;
+  }
+
+}
